@@ -9,11 +9,11 @@ def draw_across_line(count):
         # print(i, end="")
 
 
-def draw_down_line(count):
+def draw_down_line(count, diverted_flag=''):
     for i in range(count):
-        print("|", end='')
+        print("|", end=diverted_flag)
 
-
+print(" ", end="")
 for num in range(1, 7):
     draw_down_line(1)
     print(num, end='')
@@ -24,4 +24,5 @@ for num in range(1, 7):
 draw_across_line(14)
 
 for num in range(1, 7):
-    print(num)
+    print(num, end="")
+    draw_down_line(1, "\n")
